@@ -1,0 +1,61 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="一個簡單,快速寫日記的網站">
+    <meta name="author" content="流星">
+    <meta name="keywords" content="日記,單調,簡單,快速">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Diary</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./diary.css">    
+</head>
+<body>
+
+<div class="book">
+    <div class="diary">
+    <div class="diary-1">
+        <div calss="date">
+        日期:<input id="date" type="date"  >
+        </div>
+        <div class='week'>星期:    
+            <select id="week" >
+                <option ></option>
+                <option value="一">一</option>
+                <option value="二">二</option>
+                <option value="三">三</option>
+                <option value="四">四</option>
+                <option value="五">五</option>
+                <option value="六">六</option>
+                <option value="日">日</option>
+            </select>
+        </div>
+        <div class="weather">
+        天氣:
+            <select id="weather" >
+                <option ></option>
+                <option value="晴天">晴天</option>
+                <option value="陰天">陰天</option>
+                <option value="雨天">雨天</option>
+                <option value="颱風天">颱風天</option>
+            </select>
+        </div>
+        <div>
+        <button id="add" class="add" >新增</button>
+        </div>
+        <button id="del" class="del" >X</button>
+    </h1>
+    </div> 
+    <hr>
+    <div>
+        <textarea class="content" id="content" ></textarea>
+    </div>
+    </div>
+    <div id = list class="list">
+    <div id="arr" style="height: 50px;">
+        內容
+    </div>
+    </div>
+</div>
+<script src="diary.js"></script> 
+</body>
