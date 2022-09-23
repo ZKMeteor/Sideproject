@@ -55,6 +55,7 @@ align-items: center;                /*水平*/
 }
 
 .top-2 div{
+    width: 20%;
     line-height: 30PX;
     letter-spacing:0.15em;          /* 文字間距 */
     font-size: 25PX;
@@ -63,8 +64,8 @@ align-items: center;                /*水平*/
 }
 
 .top-2 div:hover{
-
-    background:#D6D6FF;
+    transition: 0.5s;
+    background:rgba(140, 247, 255, 0.884);
 }
 
 .top-3{
@@ -159,6 +160,7 @@ h2{
 
 .title2-2{
     width: 30%;
+
 }
 
 .title2-3{
@@ -175,7 +177,6 @@ h2{
     line-height: 1.8em;
     letter-spacing: 0.2em;
     word-wrap:break-word;   /*以單字為單位換行*/
-    text-align: center;
 }
 
 .title3{
