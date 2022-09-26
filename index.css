@@ -21,31 +21,31 @@ a:hover{text-decoration:none}  /*超連結去底線*/
     animation-iteration-count: infinite;
 } */
 
-.top{
+.nav{
 position: fixed;
 top: 0%;left: 0%; 
 width:100%; 
-height: 65px;; 
+height: 60px;; 
 background-color: white ;
 opacity:0.9;
 display: flex;
 }
 
-.top img{
+.nav img{
    height: 30px; width: 30px; ;
 }
 
-.top-1{
-padding: 25px;
-text-align: center;
+.nav-1{
 flex: 1;
-width:23px;
-height:23px;
+height:100%;
 object-fit:cover;
 object-position:50% 50%;
+display: flex;
+align-items: center;
+justify-content:center;
 }
 
-.top-2{
+.nav-2{
 flex: 1;
 display: flex;
 flex-direction: row;                /*由左至右*/
@@ -54,126 +54,80 @@ align-items: center;                /*水平*/
 
 }
 
-.top-2 div{
-    width: 20%;
-    line-height: 30PX;
+.nav-2 div{
     letter-spacing:0.15em;          /* 文字間距 */
     font-size: 25PX;
-    text-align: center;
+}
+
+.nav-2 a:hover{
+    border-radius: 50PX;
+    transition: 0.5s;
+    background:rgba(140, 247, 255, 0.884);
     color: purple;
 }
 
-.top-2 div:hover{
-    transition: 0.5s;
-    background:rgba(140, 247, 255, 0.884);
+.container-fluid{
+    padding:60px 5% ;
 }
 
-.top-3{
-padding-top: 25px;
-
-}
-
-.pic1 img{
-max-width: 100%;
-object-fit: cover;
-object-position: 50% 50%;
-vertical-align: bottom;         /* 向下靠攏 */
-}
-
-@keyframes change-color{
-    0%{color: #C2C2FF;}
-    10%{color: gray;}
-    20%{color: gold;}
-    30%{color: orange;}
-    40%{color: red;}
-    50%{color: black;}
-    60%{color: white;}
-    70%{color: purple;}
-    80%{color: #8C8CFF;}
-    90%{color: blue;}
-    100%{color: green;}
-}
-
-/* .title{
-    animation-name:change-color;
-    animation-duration: 10s;
-    animation-iteration-count: infinite;
+/* .pic1 img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    vertical-align: bottom;          向下靠攏 
 } */
 
-.title2{
+
+.row{
+    padding:0% 10%;
+}
+
+.title2 {
     background-color:#FFF8D7;
-    padding: 60px;
+    padding-top: 60px;
 }
 
 h1{
     color: purple;
-    line-height: normal;
     letter-spacing:0.15em;
-    font-size:63px;
-    font-weight:bold;
+    font-size:60px;
+    font-weight:800;    /* 粗體 */
     text-align: center;
-}
-
-
-h1:hover{
-    background-color:;
-    opacity: ;
-    border-radius:;
 }
 
 hr{
     border-color: #727878;
-    opacity: 0.2;
+    opacity: 0.3;
     align-items: center;
-    width: 80%;
-    margin-bottom:60px ;
+    width: 100%;
+    margin:30px 0;
+
 }
 
 .title2 .box{
-    display: flex;
-    flex-direction: row;                /*由左至右*/ 
-    align-items: center;
-    justify-content:space-between;
+    width: 100%;
+    justify-content: space-between;
     margin-top: 50px;
-    height: 700px;
 }
 
 h2{
     font-weight:800;    /* 粗體 */
     font-size: 40px;
-    color: purple;
+    color: rgba(255, 175, 1, 0.973);
 
-}
-
-.title2-1{
-    width: 30%;
 }
 
 .title2-1 img{
+    max-width: 100%;
 
-    max-width: 85%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    border: 0px purple solid;
     border-radius: 45px;
 }
-
-.title2-2{
-    width: 30%;
-
-}
-
-.title2-3{
-    width: 30%;
-}
-
-
 
 .title2 p{
     font-family: DFKai-sb;
     display: inline-block;
     color: black;
-    font-size: 27px;
+    font-size: 25px;
     line-height: 1.8em;
     letter-spacing: 0.2em;
     word-wrap:break-word;   /*以單字為單位換行*/
@@ -181,34 +135,13 @@ h2{
 
 .title3{
     background-color:white;
-    padding: 60px 200px 150px 200px;
-    height: 600px;
+
 }
 
-.title3-1{
-    display: flex;
-    justify-content: space-between;
-}
-
-.title3-1-1 img{
-    height: 350px;
-    width: 600px;
-}
 .title3-1-1{
     position: relative;
+
 }
-
-.title3-1-1-1 {
-    position: absolute;top:20px;left: 20px;
-}
-
-.title3-1-1-1:hover{
-
-    background-color: rgba(140, 247, 255, 0.884);
-    opacity: 0.9;
-    transition: 0.5s;
-}
-
 
 h3{
     color: purple;
@@ -216,7 +149,6 @@ h3{
     line-height:1.2em ;
     letter-spacing:0.1em;
     text-align: left;
-
 }
 
 .title3 p{
@@ -237,43 +169,31 @@ h3{
 }
 
 .hover1-2{
-    padding-left: 5em;
+    padding-left: 4em;
 }
 
 .hover1:hover{
+    width: 100%;
     transition: 0.5s;
     background-color: rgba(140, 247, 255, 0.884);
     opacity: 1;
 }
 
-
 .title4{
     background-color:#FFF8D7;
-    padding: 60px 150px 60px 150px;
+    height: 100%;
 }
 
-.title4-1{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;    
-/*     align-items: center;
-    justify-content:center; */
-}
-
-.title4-1 div{
+.title4 div{
     text-align: center;
-    width:50%;
-    height: 150px;
-
 }
 
 .title4 p{
     color: black;
-    font-size: 27px;
+    font-size: 25px;
     line-height: 1.8em;
     letter-spacing: 0.1em;
     word-wrap:break-word;   /*以單字為單位換行*/
-
 } 
 
 
@@ -297,5 +217,50 @@ h3{
     line-height: 50px;
     letter-spacing: 0.3em;
     color: purple;
+
+}
+
+@media screen and (max-width: 767px){
+    .title2{
+    padding:20px;
+    }
+
+    .title2 p{
+        font-family: DFKai-sb;
+        display: inline-block;
+        color: black;
+        font-size: 17px;
+        line-height: 1.8em;
+        letter-spacing: 0.2em;
+        word-wrap:break-word;   /*以單字為單位換行*/
+    }
+
+    h1{
+        color: purple;
+        letter-spacing:0.15em;
+        font-size:40px;
+        font-weight:800;    /* 粗體 */
+        text-align: center;
+    }
+    
+    h2{
+    font-weight:800;    /* 粗體 */
+    font-size: 30px;
+    color: rgba(255, 175, 1, 0.973);
+
+    }
+
+    h3{
+    color: purple;
+    font-size: 10px;
+    line-height:1.2em ;
+    letter-spacing:0.1em;
+    text-align: left;
+    }
+
+
+
+
+
 
 }

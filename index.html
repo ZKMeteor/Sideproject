@@ -6,18 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>星の個人網站</title>
     <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./index.css">
-
+    
 </head>
 
 <body>
 
-<div class="pic1" id="pic1">
-    <img src="./picture/main.jpg" />
+<div class="" id="pic1">
+    <img src="./picture/main.jpg" class="img-fluid"/>
 </div>
 
-<div class="top">
-    <div class="top-1">
+<div class="nav nav-pills flex-column flex-sm-row">
+    <div class="nav-1">
         <a href="https://www.facebook.com/ZanKiMeteor/">
         <img src="https://static.wixstatic.com/media/e316f544f9094143b9eac01f1f19e697.png/v1/fill/w_23,h_23,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/e316f544f9094143b9eac01f1f19e697.png">
         </a>
@@ -29,102 +30,97 @@
         </a>
     </div>
 
-    <div class="top-2">
-        <div class="top-2-1"><a href="#pic1">Home</a></div>
-        <div class="top-2-3"><a href="#about">About</a></div>        
-        <div class="top-2-4"><a href="#Porject">Porject</a></div>
-        <div class="top-2-5"><a href="#Contact">Contact</a></div>
+    <li class="nav-2 nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">三</a>
+        <ul class="dropdown-menu">
+          <li><a class="dropdown-item" href="#pic1">Home</a></li>
+          <li><a class="dropdown-item" href="#about">About</a></li>
+          <li><a class="dropdown-item" href="#Porject">Porject</a></li>
+          <li><a class="dropdown-item" href="#Contact">Contact</a></li>
+        </ul>
+      </li>
 
+<!--     <div class="nav-2 nav-item dropdown">
+        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">三</a>
+        <div ><a class="flex-sm-fill text-sm-center nav-link dropdown-item" href="#pic1">Home</a></div>
+        <div ><a class="flex-sm-fill text-sm-center nav-link dropdown-item" href="#about">About</a></div>        
+        <div ><a class="flex-sm-fill text-sm-center nav-link dropdown-item" href="#Porject">Porject</a></div>
+        <div ><a class="flex-sm-fill text-sm-center nav-link dropdown-item" href="#Contact">Contact</a></div>
     </div>  
-
+ -->
 </div>  
 
-<div class="title2" id="about">
-    <h1>About&nbspMe</h1>
-    <hr>
-    <div class="box">
-
-
-        <div class="title2-2" >
-            <div class="about" >
-                <p>&nbsp&nbsp你好，我叫Meteor。<br></p>
-                <P>我是個熱愛思考設計網站的自學練習生，平時喜歡看看別人寫的網站去學習他們設計，在嘗試能不能加入自己練習的網站中，希望未來工作上能學習到更多技巧。</p>
+<div class="title2 container-fluid" id="about">
+        <h1>About&nbspMe</h1>    
+            <hr>
+            <div class="box row  row-cols-lg-3 justify-content-space between">    
+                <div class="title2-2 " >
+                        <p>&nbsp&nbsp你好，我叫Meteor。<br></p>
+                        <P>我是個熱愛思考設計網站的自學練習生，平時喜歡看看別人寫的網站去學習他們設計，在嘗試能不能加入自己練習的網站中，希望未來工作上能學習到更多技巧。</p>
+                </div>
+                <div class="title2-1 ">
+                    <img src="./picture/me.jpg" />
+                </div>
+                <div class="title2-3 " >
+                        <h2>Name:</h2><br>
+                        <P>劉景興</p>
+                        <br>
+                        <h2>Age:</h2><br>
+                        <P>22y</p>
+                        <br>
+                        <h2>Location:<br></h2>
+                        <br>
+                        <P>Tainan,Taiwan</p>
+                </div>
             </div>
-        </div>
-
-        <div class="title2-1">
-            <img src="./picture/me.jpg" />
-        </div>
-
-        <div class="title2-3" >
-            <div class="about" >
-                <h2>Name:</h2><br>
-                <P>劉景興</p>
-                <br>
-                <h2>Age:</h2><br>
-                <P>22y</p>
-                <br>
-                <h2>Location:<br></h2>
-                <br>
-                <P>Tainan,Taiwan</p>
-            </div>
-        </div>
-
-    </div>
 </div>
-<div class="title3" id="Porject">
-    <h1>Porject</h1>
-    <hr>
-    <div class="title3-1">
-            <div class="title3-1-1" >  
-                         
-                <a href="diary.html">  
-                <div class="hover1">  
-                <h2>Diary</h2>
-                <hr>
-                    <div class="hover1-2">
-                        <p>一個簡單,快速寫日記的網站。</p>
+<div class="title3 container-fluid" id="Porject">
+        <h1>Porject</h1>
+        <hr>
+        <div class="row row-cols-lg-2">
+                <div class="title3-1-1 " >
+                    <a href="diary.html">  
+                    <div class="hover1">  
+                        <h2>Diary</h2>
                         <br>
-                        <br>
-                        <br>
-                        <h3>Skill:</h3>
-                        <p>addEventListener.</p>
+                            <div class="hover1-2">
+                                <p>一個簡單,快速寫日記的網站。</p>
+                                <br>
+                                <h3>Skill:</h3>
+                                <p>addEventListener.</p>
+                            </div>
                     </div>
-                </div>                               
-                <img src="./picture/diary.jpg"/>
-                </a>                   
-            </div>
-            <div>
-
-            </div>
-    </div>
+                    <img src="./picture/diary.jpg" class="img-fluid"/>
+                    </a>
+                </div>
+        </div>
 </div>
 
-
-<div class="title4" id="Contact">
-    <h1>Contact</h1>
-    <hr>
-    <div class="title4-1">
-        <div>
-            <h2>E-mail:</h2>
-            <p>53065306@gmail.com</p>
-        </div>
-        <div>
-            <h2>Line:</h2>
-            <p>zanki_meteor</p>
-        </div>
-        <div>
-            <h2>Cellphone:</h2>
-            <p>0912176038</p>
-        </div>
-    </div>
+<div class="title4 container-fluid" id="Contact">  
+        <h1>Contact</h1>
+        <hr>
+            <div class="row row-cols-lg-2">
+                <div class="col-lg-6">
+                    <h2>E-mail:</h2>
+                    <p>53065306@gmail.com</p>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Line:</h2>
+                    <p>zanki_meteor</p>
+                </div>
+                <div class="col-lg-6">
+                    <h2>Cellphone:</h2>
+                    <p>0912176038</p>
+                </div>
+            </div>
 </div>
 
 
 
-<div class="footer">
+<div class="footer ">
     ©2022 &nbspZanKiMeteor
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 <script src="index.js"></script>
 </body>
 
