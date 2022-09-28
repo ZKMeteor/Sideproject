@@ -67,7 +67,7 @@ align-items: center;                /*水平*/
 }
 
 .container-fluid{
-    padding:60px 5% ;
+    padding:4% 3% ;
 }
 
 /* .pic1 img{
@@ -78,13 +78,13 @@ align-items: center;                /*水平*/
 } */
 
 
-.row{
-    padding:0% 10%;
+
+.row > div{
+    padding: 3%;
 }
 
 .title2 {
     background-color:#FFF8D7;
-    padding-top: 60px;
 }
 
 h1{
@@ -105,9 +105,8 @@ hr{
 }
 
 .title2 .box{
-    width: 100%;
     justify-content: space-between;
-    margin-top: 50px;
+    margin-top: 5%;
 }
 
 h2{
@@ -119,8 +118,11 @@ h2{
 
 .title2-1 img{
     max-width: 100%;
-
     border-radius: 45px;
+}
+
+.title2-3{
+    
 }
 
 .title2 p{
@@ -135,11 +137,9 @@ h2{
 
 .title3{
     background-color:white;
-
 }
 
 .title3-1-1{
-    position: relative;
 
 }
 
@@ -164,19 +164,22 @@ h3{
     opacity: 0;
     text-align: center;
     padding-top: 5px;
+}
+
+
+
+.title3-1-1 .box{
+    position: relative;
+}
+
+.title3-1-1:hover .hover1{
     width: 100%;
     height: 100%;
-}
-
-.hover1-2{
-    padding-left: 4em;
-}
-
-.hover1:hover{
-    width: 100%;
     transition: 0.5s;
     background-color: rgba(140, 247, 255, 0.884);
     opacity: 1;
+
+    padding-left: 4em;
 }
 
 .title4{
@@ -198,15 +201,6 @@ h3{
 
 
 
-
-
-
-
-
-
-
-
-
 .footer{
     width: 100%;
     height: 50px;
@@ -221,46 +215,40 @@ h3{
 }
 
 @media screen and (max-width: 767px){
-    .title2{
-    padding:20px;
-    }
-
+    
     .title2 p{
-        font-family: DFKai-sb;
-        display: inline-block;
-        color: black;
-        font-size: 17px;
-        line-height: 1.8em;
-        letter-spacing: 0.2em;
-        word-wrap:break-word;   /*以單字為單位換行*/
+
+        font-size: 20px;
+  /*以單字為單位換行*/
     }
 
+    .title4 p{
+        color: black;
+        font-size: 20px;
+        line-height: 1.8em;
+        letter-spacing: 0.1em;
+        word-wrap:break-word;   /*以單字為單位換行*/
+    } 
     h1{
-        color: purple;
-        letter-spacing:0.15em;
-        font-size:40px;
-        font-weight:800;    /* 粗體 */
-        text-align: center;
+
+        font-size:30px;
+
     }
     
     h2{
-    font-weight:800;    /* 粗體 */
-    font-size: 30px;
-    color: rgba(255, 175, 1, 0.973);
 
+    font-size: 25px;
     }
 
     h3{
-    color: purple;
+
     font-size: 10px;
-    line-height:1.2em ;
-    letter-spacing:0.1em;
-    text-align: left;
+
     }
 
 
-
-
-
+    .footer{
+        font-size: 15px;   
+    }
 
 }
