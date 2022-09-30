@@ -5,57 +5,61 @@
     <meta name="description" content="一個簡單,快速寫日記的網站">
     <meta name="author" content="流星">
     <meta name="keywords" content="日記,單調,簡單,快速">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>My Diary</title>
     <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./diary.css">    
 </head>
 <body>
-
-<div class="book">
-    <div class="diary">
-    <div class="diary-1">
-        <div calss="date">
-        日期:<input id="date" type="date"  >
+<div class="container mt-3"> 
+    <div class="row row-cols-lg-2 " >
+        <div class="diary ">
+            <div class="diary-top pt-3">
+                    <div calss="date">
+                    <h1>日期:</h1>
+                    <input id="date" type="date"  >
+                    </div>
+                    <div class='week'>
+                    <h1>星期:</h1>    
+                        <select id="week" >
+                            <option ></option>
+                            <option value="一">一</option>
+                            <option value="二">二</option>
+                            <option value="三">三</option>
+                            <option value="四">四</option>
+                            <option value="五">五</option>
+                            <option value="六">六</option>
+                            <option value="日">日</option>
+                        </select>
+                    </div>
+                    <div class="weather">
+                    <h1>天氣:</h1>
+                        <select id="weather" >
+                            <option ></option>
+                            <option value="晴天">晴天</option>
+                            <option value="陰天">陰天</option>
+                            <option value="雨天">雨天</option>
+                            <option value="颱風天">颱風天</option>
+                        </select>
+                    </div>
+                    <div>
+                    <button id="add" class="del" >新增</button>
+                    </div>
+            </div> 
+            <hr>
+            <div >
+                <textarea class="content"id="content"></textarea>
+            </div>
         </div>
-        <div class='week'>星期:    
-            <select id="week" >
-                <option ></option>
-                <option value="一">一</option>
-                <option value="二">二</option>
-                <option value="三">三</option>
-                <option value="四">四</option>
-                <option value="五">五</option>
-                <option value="六">六</option>
-                <option value="日">日</option>
-            </select>
-        </div>
-        <div class="weather">
-        天氣:
-            <select id="weather" >
-                <option ></option>
-                <option value="晴天">晴天</option>
-                <option value="陰天">陰天</option>
-                <option value="雨天">雨天</option>
-                <option value="颱風天">颱風天</option>
-            </select>
-        </div>
-        <div>
-        <button id="add" class="add" >新增</button>
-        </div>
-        <button id="del" class="del" >X</button>
-    </h1>
-    </div> 
-    <hr>
-    <div>
-        <textarea class="content" id="content" ></textarea>
-    </div>
-    </div>
-    <div id = list class="list">
-    <div id="arr" style="height: 50px;">
-        內容
-    </div>
+            <div id = list class="list">
+                <div id="arr" style="height: 50px;">
+                內容
+                </div>
+            </div>
     </div>
 </div>
-<script src="diary.js"></script> 
+<script src="diary.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
 </body>

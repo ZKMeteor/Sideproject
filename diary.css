@@ -2,30 +2,19 @@ body {
     background-image: url(./picture/diarybg.jpg);
 }
 
-.book{
-    display: flex;
-    height: 100%;    
-    margin-left: 50px;
-    margin-top: 10px;
-}
-
 .diary{
-    width: 45% ;
-    height: 95%;
-    padding: 20px 20px 5px 20px;
+    height: 90vh;
     border: 2px solid black;
     border-radius: 10px;
     box-sizing: border-box;
     background-color:#FFF7E8;
 }
 
-.diary-1{
+.diary-top{
     display: flex;
     flex-direction: row; /* 左至右 */
     justify-content:space-around;   /* 資料橫向致中 */
     align-items: center;            /* 上下致中 */
-    font-size: 30px;
-    height: 35px;
 }
 
 #date{
@@ -36,19 +25,15 @@ select{
     font-size: 20px;
 }
 
-.add{
-    font-size: 25px;
-    background-color: white;
-    border: 1px black solid;
-    border-radius: 10%;
-    color: black;
+h1{
+    font-size: 20px;
+    display: inline-block;
 }
-
 .del{
     background-color: white;
     border-radius: 10%;
     border: 0px ;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 #flex{
@@ -58,16 +43,14 @@ select{
     justify-content: space-evenly;
 }
 
-.content{
-    font-size: 30px;
-    height:90%; 
-    width:100%;
+textarea{
+    width: 100%;
+    height: 70vh;
+    font-size: 20px;
 }
 
 .list {
-    margin-left: 20px;
-    width: 45% ;
-    height: 95%;
+    height: 90vh;
     padding: 20px 20px 5px 20px;
     border: 2px solid black;
     border-radius: 10px;
@@ -77,8 +60,7 @@ select{
   }
 
 button:hover{
-    background-color: gray;
-    
+    background-color: gray;  
 }
 
 #arr:hover{

@@ -22,6 +22,7 @@ a:hover{text-decoration:none}  /*超連結去底線*/
 } */
 
 .nav{
+z-index: 9999;
 position: fixed;
 top: 0%;left: 0%; 
 width:100%; 
@@ -51,7 +52,6 @@ display: flex;
 flex-direction: row;                /*由左至右*/
 justify-content: space-evenly;      /*間隔*/
 align-items: center;                /*水平*/
-
 }
 
 .nav-2 div{
@@ -140,10 +140,6 @@ h2{
     background-color:white;
 }
 
-.title3-1-1{
-
-}
-
 h3{
     color: purple;
     font-size: 25px;
@@ -179,8 +175,7 @@ h3{
     transition: 0.5s;
     background-color: rgba(140, 247, 255, 0.884);
     opacity: 1;
-
-    padding-left: 4em;
+    padding-left: 3em;
 }
 
 .title4{
@@ -220,7 +215,6 @@ h3{
     .title2 p{
 
         font-size: 20px;
-  /*以單字為單位換行*/
     }
 
     .title4 p{
