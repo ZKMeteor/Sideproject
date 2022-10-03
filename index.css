@@ -69,19 +69,26 @@ align-items: center;                /*水平*/
 .container-fluid{
     padding:4% 3% ;
 }
-
-/* .pic1 img{
-    max-width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    vertical-align: bottom;          向下靠攏 
-} */
-
-
-
 .row > div{
     padding: 3%;
 }
+
+/* .active  > img{
+    max-width: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+    vertical-align: bottom;         
+} */
+
+.title1 h5{
+    color: orange;
+    letter-spacing: 0.3em;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
 
 .title2 {
     background-color:#FFF8D7;
