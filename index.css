@@ -173,11 +173,11 @@ h3{
 
 
 
-.title3-1-1 .box{
+.title3 .box{
     position: relative;
 }
 
-.title3-1-1:hover .hover1{
+.title3 .box:hover .hover1{
     width: 100%;
     height: 100%;
     transition: 0.5s;

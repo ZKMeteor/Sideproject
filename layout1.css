@@ -1,14 +1,86 @@
+a{text-decoration:none}
+a:hover{text-decoration:none}  /*超連結去底線*/
+
+.box{
+    
+}
+
+.item{
+    background-color:black;
+}
+
+h1{
+    color: white;
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0.4em;
+    text-align: center;
+}
+
+h2{
+    position: absolute;
+}
+
+.menu a{
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-align: left;
+}
+
+.menu a:hover{
+    color: aqua;
+    transition: 0.5s;
+}
+
+.book{
+    position: relative;
+    display: flex;
+}
+
+.book div{
+    width: 10%;
+}
+
+.book img{
+    z-index: 0;
+    position: absolute;
+    height: 100vh;
+    max-width:10%;
+    object-fit:cover;
+    object-position:50% 50%;
+    opacity: 0.5;
+}
+
+.book img:hover{
+    z-index: 50;
+    height: 100vh;
+    max-width:100%;
+    object-fit:cover;
+    object-position:50% 50%;
+    opacity: 1;
+    transition: 1.3s;
+}
+
+.Cmate :hover{
 
 
+} 
 
+.Cmate :hover ::after{
+    z-index: 60;
+    width: 0%;
 
+    content: "實力至上";
+    color: goldenrod;
+    font-size: 50px;
+    font-weight: 600;
+}
 
+.Wend{
 
-
-
-
-
-
+}
 
 
 
@@ -98,21 +170,13 @@
 
 
 .footer{
-    height: 50px;
+    height: 45px;
     opacity: 0.5;
-    font-size: 15px;
+    font-size: 20px;
     background-color: rgba(140, 247, 255, 0.884);
     text-align: center;
-    line-height: 50px;
+    line-height: 45px;
     letter-spacing: 0.3em;
     color: purple;
 }
 
-
-@media screen and (min-width: 767px){
-
-.footer{
-    font-size: 20px;   
-}
-
-}
