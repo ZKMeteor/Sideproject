@@ -10,20 +10,25 @@ a:hover{text-decoration:none}  /*超連結去底線*/
 }
 
 h1{
+
     color: white;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 40px;
     letter-spacing: 0.4em;
     text-align: center;
 }
 
+ul li{
+
+}
+
 h2{
-    position: absolute;
+
 }
 
 .menu a{
     color: white;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 600;
     letter-spacing: 0.2em;
     text-align: left;
@@ -35,134 +40,45 @@ h2{
 }
 
 .book{
-    position: relative;
     display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+
 }
 
 .book div{
     width: 10%;
+    height: 97vh;
+    padding-bottom:3%;
 }
 
-.book img{
-    z-index: 0;
+.book img {
+    height: 90vh;
     position: absolute;
-    height: 100vh;
-    max-width:10%;
+    max-width:8%;
     object-fit:cover;
     object-position:50% 50%;
     opacity: 0.5;
 }
 
-.book img:hover{
+.book div:hover img{
     z-index: 50;
-    height: 100vh;
+    position: absolute;
     max-width:100%;
     object-fit:cover;
     object-position:50% 50%;
     opacity: 1;
-    transition: 1.3s;
+    transition: 1.0s;
 }
 
-.Cmate :hover{
+.book div:hover{
 
-
-} 
-
-.Cmate :hover ::after{
-    z-index: 60;
-    width: 0%;
-
-    content: "實力至上";
-    color: goldenrod;
-    font-size: 50px;
-    font-weight: 600;
 }
+
 
 .Wend{
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
