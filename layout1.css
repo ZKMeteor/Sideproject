@@ -52,7 +52,7 @@ h2{
     flex-grow: 1;
     height: 95vh;
     padding-bottom:0%;
-    border: 1px pink solid;
+
 }
 
 .book img {
@@ -78,11 +78,8 @@ h2{
     transition: 1.0s;
 }
 
-.Cmate {
-
-    content: '實力至上';
-    color: gold;
-    font-size: 25px;
+.Cmate{
+    
 }
 
 
