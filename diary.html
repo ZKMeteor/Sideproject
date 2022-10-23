@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./diary.css">    
+    <script type="text/javascript" src="./vue.js"></script>
+   
 </head>
 <body>
 <div class="container mt-3"> 
@@ -23,7 +25,7 @@
                     <div class='week'>
                     <h1>星期:</h1>    
                         <select id="week" >
-                            <option selected></option>
+                            <option selected :value="nowday" >{{nowday}}</option>
                             <option value="一">一</option>
                             <option value="二">二</option>
                             <option value="三">三</option>
@@ -62,7 +64,47 @@
             </div>
     </div>
 </div>
-<script src="diary.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script type="text/javascript" src="./vue.js"></script>
 
+<script type="text/javascript">
+    Vue.config.porductionTip = false;
+    let time =new Date();
+    let nowdate = new Date().getDate();
+    let nowday = new Date().getDay();
+    if(nowday == 0){
+        nowday = "日";
+    }else if(nowday==1){
+        nowday = "一";
+    }
+    else if(nowday==2){
+        nowday = "二";
+    }else if(nowday==3){
+        nowday = "三";
+    }
+    else if(nowday==4){
+        nowday = "四";
+    }
+    else if(nowday==5){
+        nowday = "五";
+    }
+    else if(nowday==6){
+        nowday = "六";
+    }
+    
+    console.log(time,nowdate,nowday);
+
+    new Vue({
+        el:'.week',  //el選擇 div  的id或class
+        data:{       //儲存數據
+            nowday:nowday,
+        }
+        
+
+    })
+
+</script>
+
+
+<script src="./diary.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>

@@ -25,11 +25,11 @@ listarr.forEach(function(arry){
     `;
 
     date.value = '';
-    week.value = '';
+    week.value = nowday;
     weather.value = '';
     content.value = '';
 
-
+console.log(listarr.length);
 })
 
 list.innerHTML = html
@@ -45,7 +45,7 @@ add.addEventListener('click',function (){
     render() 
 })
 
-console.log(listarr.length);
+
 
 del.addEventListener('click',function (){
     listarr.splice(listarr.length-1,1,)
@@ -53,7 +53,4 @@ del.addEventListener('click',function (){
 })
 
 
-let time =new Date()
-let nowdate = time.getDate()
-let nowday = time.getDay()
-console.log(nowdate,nowday);
+
