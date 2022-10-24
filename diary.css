@@ -73,4 +73,12 @@ span{
 
 P{
     word-wrap:break-word;   /*以單字為單位換行*/
+
+}
+
+h2:hover{
+    background:black;
+    color: white;
+    display:inline;
+    border-radius: 10px;
 }
