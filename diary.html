@@ -15,6 +15,7 @@
 </head>
 <body>
 <div class="Full container mt-3"> 
+    <h2>今日日期:{{nowdate}},日記數量{{addclick}}</h2> 
     <div class="row row-cols-lg-2 " >
         <div class="diary ">
             <div class="diary-top pt-3">
@@ -46,7 +47,7 @@
                         </select>
                     </div>
                     <div>
-                    <button id="add" class="del" >新增</button>
+                    <button id="add" class="del" @click="addplus()" >新增</button>
                     </div>
                     <div>
                         <button id="del" class="del" v-on:click="del()">X</button>  
@@ -62,8 +63,7 @@
                 內容
                 </div>
             </div>      
-    </div>
-<h2>今日日期:{{nowdate}}</h2>    
+    </div>   
 </div>
 <script type="text/javascript" src="./vue.js"></script>
 
@@ -73,7 +73,7 @@
     let nowdate = new Date().getDate();
     let nowday = new Date().getDay();
     let nowyear = new Date().getFullYear();
-    let nowmonth = new Date().getMonth();
+    let nowmonth = new Date().getMonth(); 
     
     if(nowday == 0){
         nowday = "日";
@@ -97,33 +97,33 @@
     nowmonth+=1;
     let YWDate = String(nowyear)+'-'+String(nowmonth)+'-'+String(nowdate);
 
-    console.log(YWDate,nowday);
+    console.log(YWDate,nowday,);
     // v-blind:單向輸出 簡寫 :  v-model:雙向輸出-->使用在表單上  簡寫 v-model=""
 
-    new Vue({
+    const vm = new Vue({
         el:'.Full',  //el選擇 div  的id或class
         data:{       //儲存數據
             nowday:nowday,
             nowdate:YWDate,
-
+            addclick:0,
         },
-        methods:{
+        methods:{   //函數
             del(number){
-                listarr.splice(listarr.length-1,1,)
-                render()
-
+                listarr.splice(listarr.lenth,1);
+                this.addclick--
+                render();
+            },
+            addplus(){
+                this.addclick++
             }
         },
-/*         computed:{
-            YWDate:{
-                get(){
-                    return YWDate
-                }
-            }
-        } */
+        computed:{      //計算        
+
+        }
 
     })
-
+    let diarynum = vm.addclick;
+    console.log(diarynum,vm.addclick);
 </script>
 
 

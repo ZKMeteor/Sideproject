@@ -5,6 +5,7 @@ const content = document.getElementById('content')
 const del = document.getElementById('del')
 const add = document.getElementById('add')
 const list = document.getElementById('list')
+const num = 0
 const listarr = []
 
 
@@ -13,16 +14,18 @@ function render(){
     listarr.forEach(function(arry){
         html = html + `
         <div id="arr">
-        <div id = flex>
+            <div id = flex>
+                <span>${diarynum}</span>       
                 <span>${arry.date}</span>
                 <span>星期:${arry.week}</span>
                 <span>天氣:${arry.weather}</span>
-                <button id="del" class="del" v-on:click="del(listarr.length-1)">X</button> 
+                <button id="del" class="del" v-on:click="del()">X</button> 
             </div>
                 <p>${arry.content}<p>
                 <hr>
         </div>
         `;
+
         date.value = '';
         week.value = nowday;
         weather.value = '';
@@ -30,12 +33,13 @@ function render(){
     })
     list.innerHTML = html
 
-    const num = listarr.length;
-    console.log(num)    
+
+
 }
 
 add.addEventListener('click',function (){
     listarr.unshift({
+         num:diarynum.value,
          date:date.value,
          week:week.value,
          weather:weather.value,

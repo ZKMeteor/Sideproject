@@ -76,6 +76,10 @@ P{
 
 }
 
+h2{
+    color: rgb(0, 68, 255);
+}
+
 h2:hover{
     background:black;
     color: white;
