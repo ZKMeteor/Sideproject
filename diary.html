@@ -14,7 +14,8 @@
    
 </head>
 <body>
-<div class="Full container mt-3"> 
+<div class="Full container mt-3">
+<div id="addclick" style="display:none">{{addclick}}</div>     
     <h2>今日日期:{{nowdate}},日記數量{{addclick}}</h2> 
     <div class="row row-cols-lg-2 " >
         <div class="diary ">
@@ -54,7 +55,7 @@
                     </div>
             </div> 
             <hr>
-            <div >
+            <div>
                 <textarea class="content"id="content"></textarea>
             </div>
         </div>
@@ -63,7 +64,7 @@
                 內容
                 </div>
             </div>      
-    </div>   
+    </div> 
 </div>
 <script type="text/javascript" src="./vue.js"></script>
 
@@ -100,6 +101,7 @@
     console.log(YWDate,nowday,);
     // v-blind:單向輸出 簡寫 :  v-model:雙向輸出-->使用在表單上  簡寫 v-model=""
 
+
     const vm = new Vue({
         el:'.Full',  //el選擇 div  的id或class
         data:{       //儲存數據
@@ -110,20 +112,21 @@
         methods:{   //函數
             del(number){
                 listarr.splice(listarr.lenth,1);
-                this.addclick--
+                if (this.addclick > 0){
+                    this.addclick--;
+                }
                 render();
             },
             addplus(){
-                this.addclick++
+                this.addclick++;
+                console.log(vm.addclick);
             }
         },
         computed:{      //計算        
-
         }
-
     })
-    let diarynum = vm.addclick;
-    console.log(diarynum,vm.addclick);
+    const diarynum = vm.addclick;
+/*     console.log(diarynum,vm.addclick); */
 </script>
 
 

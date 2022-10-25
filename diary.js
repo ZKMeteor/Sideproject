@@ -5,7 +5,7 @@ const content = document.getElementById('content')
 const del = document.getElementById('del')
 const add = document.getElementById('add')
 const list = document.getElementById('list')
-const num = 0
+const addclick = document.getElementById('addclick')
 const listarr = []
 
 
@@ -15,11 +15,10 @@ function render(){
         html = html + `
         <div id="arr">
             <div id = flex>
-                <span>${diarynum}</span>       
                 <span>${arry.date}</span>
                 <span>星期:${arry.week}</span>
                 <span>天氣:${arry.weather}</span>
-                <button id="del" class="del" v-on:click="del()">X</button> 
+                <button id="del" class="del" @click="del()">X</button> 
             </div>
                 <p>${arry.content}<p>
                 <hr>
@@ -31,7 +30,7 @@ function render(){
         weather.value = '';
         content.value = '';
     })
-    list.innerHTML = html
+    list.innerHTML = html;
 
 
 
@@ -39,7 +38,6 @@ function render(){
 
 add.addEventListener('click',function (){
     listarr.unshift({
-         num:diarynum.value,
          date:date.value,
          week:week.value,
          weather:weather.value,
