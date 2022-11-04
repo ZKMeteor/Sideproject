@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="Full container mt-3">
-<div id="addclick" style="display:none">{{addclick}}</div>     
+<div id="addclick" v-show="false">{{addclick}}</div>     
     <h2>今日日期:{{nowdate}},日記數量{{addclick}}</h2> 
     <div class="row row-cols-lg-2 " >
         <div class="diary ">
@@ -106,8 +106,9 @@
         el:'.Full',  //el選擇 div  的id或class
         data:{       //儲存數據
             nowday:nowday,
-            nowdate:YWDate,
+            nowdate:YWDate, 
             addclick:0,
+            addnewclick:0,
         },
         methods:{   //函數
             del(number){
@@ -118,15 +119,30 @@
                 render();
             },
             addplus(){
+                listarr.unshift({
+                    date:date.value,
+                    week:week.value,
+                    weather:weather.value,
+                    content:content.value
+                })
+                render();
                 this.addclick++;
-                console.log(vm.addclick);
+
             }
+
         },
-        computed:{      //計算        
+        computed:{      //計算 get&set        
+
+        },
+        watch:{
+            addclick:{
+                handler(newvalue,oldvalue){
+                    console.log(addclick,newvalue,oldvalue);
+                }
+            }
         }
     })
-    const diarynum = vm.addclick;
-/*     console.log(diarynum,vm.addclick); */
+
 </script>
 
 
