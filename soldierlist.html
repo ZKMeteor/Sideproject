@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>國軍招募蒐集個人資料</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="./soldierlist.css">
+</head>
+<body>
+
+    <div class="container" >
+        <div class="box">
+            <h1>國軍招募人才資料網</h1>
+            <form> 
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">姓名</span>
+                <input type="text" class="form-control" v-model.trim="user.name" >
+                </div>
+
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">身高</span>
+                <input type="text" class="form-control" v-model.number="user.hai">
+                </div>
+                
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">體重</span>
+                <input type="text" class="form-control" v-model.number="user.wei">
+                </div>
+
+                <div class="input-group mb-3">
+                <span class="input-group-text" id="basic-addon1">身分證製號</span>
+                <input type="text" class="form-control" v-model.trim="user.acc">
+                </div>
+
+                <button id="btn" @click="tableToExcel">匯出excel</button>
+            </form>
+        </div>
+        
+    </div>
+<script type="text/javascript" src="./vue.js"></script>
+<script  src="soldierlist.js"></script>
+</body>
+</html>

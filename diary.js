@@ -17,7 +17,6 @@ function render(){
                 <span>${arry.date}</span>
                 <span>星期:${arry.week}</span>
                 <span>天氣:${arry.weather}</span>
-                <button id="del" class="del">X</button> 
             </div>
                 <p>${arry.content}<p>
                 <hr>
