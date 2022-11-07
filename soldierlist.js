@@ -38,7 +38,7 @@ const vm = new Vue({
          var link = document.createElement("a");
          link.href = uri;
          //對下載的檔案命名
-         link.download =  "個人資料表.csv";
+         link.download =  this.user.name+"資料表.csv";
          document.body.appendChild(link);
          link.click();
          document.body.removeChild(link);
