@@ -13,7 +13,8 @@ function render(){
     listarr.forEach(function(arry){
         html +=`
         <div id="arr">
-            <div id = flex>
+            <div id = flex>                
+
                 <span>${arry.date}</span>
                 <span>星期:${arry.week}</span>
                 <span>天氣:${arry.weather}</span>
@@ -119,7 +120,7 @@ const vm = new Vue({
 let a = ''
 
 for( let i = 4 ; i >= 1 ; i--){
-        a+='*';
+        a + = '*' ;
         console.log(a);
     '\n';
 } */

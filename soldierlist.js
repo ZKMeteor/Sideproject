@@ -1,3 +1,4 @@
+// https://www.796t.com/content/1546883834.html 匯出EXCEL
 
 const vm = new Vue({
    el:'.box',
@@ -42,8 +43,8 @@ const vm = new Vue({
          document.body.appendChild(link);
          link.click();
          document.body.removeChild(link);
-       }
-      
+      }
+
    },
 });
 
