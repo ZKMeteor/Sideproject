@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <style>
+
+        body{
+            background: #FFFAF0;
+        }
+        .box-1{
+            height: 10vh;
+            font-size: 25px;
+            line-height: 2em;
+            text-align: center;
+        }
+
+        hr{
+            margin: 3px;
+            padding: 0;
+        }
+        .top-2{
+            background: #DCDCDC;
+            border-radius: 10px;
+        }
+
+        .box-2{
+            font-size: 20px;
+            background: #DCDCDC;
+            border-radius: 10px;
+            justify-content: center;
+            
+        }
+
+
+        .btnbox{
+            justify-content: center;
+        }
+
+        .list:hover{
+            background-color: #FFFAFA;
+            transition: 1s;
+            border-radius: 10px;
+        }
+
+        .box-3{
+
+            border: 2px solid orange;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        button{
+            border-radius: 10px;
+            border: 2px outset ;
+            background-color: aqua;
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div id="app">
+    
+    <div class="box container-fluid">
+        <!-- 區塊一 -->
+        <h1 class='p-3'>Information</h1>    
+        <div class="box-1 container-fluid px-3">
+            <div class="top d-flex">
+                <div class="col-3">讀取資料</div>
+                <div class="col-3">繪表</div>
+                <div class="col-3">繪圖</div>
+                <div class="col-3">完成整體網頁讀取</div>
+            </div>
+            <div class="top-2 d-flex ">
+                <div class="col-3">time</div>
+                <div class="col-3">time</div>
+                <div class="col-3">time</div>
+                <div class="col-3">time</div>
+            </div>
+        </div>
+        <!-- 區塊二 -->
+        <h1 class='p-3'>Data</h1>   
+        <div class="box-2 container-fluid p-2">
+            <div class="header d-flex py-2">
+                <div class="col-1">IDX</div>
+                <div class="col-2">CONTEXID</div>
+                <div class="col-2">PIECEID</div>
+                <div class="col-2">TIMETAG</div>
+                <div class="col-1">UCL</div>
+                <div class="col-1">LCL</div>
+                <div class="col-1">VALUE</div>
+                <div class="col-2">
+                    <input type="text" placeholder="搜尋，請輸入IDX" v-model='keyword'>
+<!--                     <button @click='sortType = 2'>TIMETAG升</button>
+                    <button @click='sortType = 1'>TIMETAG降</button> -->
+                    <button @click='add(last)'>ADD</button>
+                </div>
+            </div>
+            <hr>
+            <div style="overflow: scroll; height:50vh">
+                <div v-for="list in lists" class="list d-flex py-1 " :key="list.IDX">
+                    <div class="col-1">{{list.IDX}}</div>
+                    <div class="col-2">{{list.CONTEXID}}</div>
+                    <div class="col-2">{{list.PIECEID}}</div>
+                    <div class="col-2">{{list.TIMETAG}}</div>
+                    <div class="col-1">{{list.UCL}}</div>
+                    <div class="col-1">{{list.LCL}}</div>
+                    <div class="col-1">{{list.VALUE}}</div>
+                    <div class="col-2 ">
+                        <button @click='fix(list.IDX)'>Edit</button>
+                        <button @click='del(list.IDX)'>DEL</button>                        
+                        <button @click='Excel(list.IDX)'>匯出Excel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 區塊三 -->
+        <h1 class='p-3'>圖表</h1>  
+        <div class="box-3">
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-p34f1UUtsS3wqzfto5wAAmdvj+osOnFyQFpp4Ua3gs/ZVWx6oOypYoCJhGGScy+8" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script>
+
+Vue.config.porductionTip = false;
+
+const vm =new Vue({
+    el: '#app',
+    data: {
+        keyword:'',
+        lists: [],
+        sortType:0,
+        last :'',
+    },
+    methods: {
+        //修改按鈕
+        fix(id){
+            let CONTEXID = prompt('請輸入 CONTEXID ',this.lists[id-1].CONTEXID)
+            this.lists[id-1].CONTEXID = CONTEXID
+
+            let PIECEID = prompt('請輸入 PIECEID ',this.lists[id-1].PIECEID)
+            this.lists[id-1].PIECEID = PIECEID
+
+            let TIMETAG = prompt('請輸入 TIMETAG ',this.lists[id-1].TIMETAG)
+            this.lists[id-1].TIMETAG = TIMETAG
+
+            let UCL = prompt('請輸入 UCL ',this.lists[id-1].UCL)
+            this.lists[id-1].UCL = UCL
+
+            let LCL = prompt('請輸入 LCL ',this.lists[id-1].LCL)
+            this.lists[id-1].LCL = LCL
+
+            let VALUE = prompt('請輸入 VALUE ',this.lists[id-1].VALUE)
+            this.lists[id-1].VALUE = VALUE
+
+        },
+
+        //刪除按鈕
+        del(id){
+            if(confirm('確定刪除嗎?')){
+                this.lists = this.lists.filter((list)=>{
+                    console.log(id)
+                return list.IDX !== id
+                })
+            }
+        },
+
+        //匯出EXCEL
+        Excel(id){
+            //要匯出的json資料
+            var jsonData = [
+              {
+                IDX:this.lists[id-1].IDX,
+                CONTEXID:this.lists[id-1].CONTEXID,
+                PIECEID:this.lists[id-1].PIECEID,
+                TIMETAG:this.lists[id-1].TIMETAG,
+                UCL:this.lists[id-1].UCL,
+                LCL:this.lists[id-1].LCL,
+                VALUE:this.lists[id-1].VALUE,
+              },
+            ]
+            //列標題，逗號隔開，每一個逗號就是隔開一個單元格
+            let str = `IDX,CONTEXID,PIECEID,TIMETAG,UCL,LCL,VALUE\n`;
+            //增加\t為了不讓表格顯示科學計數法或者其他格式
+            for(let i = 0 ; i < jsonData.length ; i++ ){
+              for(let item in jsonData[i]){
+                  str+=`${jsonData[i][item] + '\t'},`;     
+              }
+              str+='\n';
+            }
+            //encodeURIComponent解決中文亂碼
+            let uri = 'data:text/csv;charset=utf-8,\ufeff' + encodeURIComponent(str);
+            //通過建立a標籤實現
+            var link = document.createElement("a");
+            link.href = uri;
+            //對下載的檔案命名
+            link.download =  this.lists[id-1].IDX+"資料表.csv";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+         },
+
+         //新增
+         add(){
+            last = this.lists.length + 1
+            let CONTEXID = prompt('目前新增ID為:'+ last +'請輸入 CONTEXID ')
+            let PIECEID = prompt('請輸入 PIECEID ')
+            let TIMETAG = prompt('請輸入 TIMETAG ')
+            let UCL = prompt('請輸入 UCL ')
+            let LCL = prompt('請輸入 LCL ')
+            let VALUE = prompt('請輸入 VALUE ')
+            
+            this.lists.splice(last,0,{
+                IDX :last,
+                CONTEXID,
+                PIECEID,
+                TIMETAG,
+                UCL,
+                LCL,
+                VALUE
+            })
+        },
+    },
+/*     computed:{
+        searchlists(){
+            const arr  = this.lists.filter((list)=>{
+            return list.IDX.indexOf(this.keyword) !== -1
+            })
+        
+            if(this.sortType){
+                arr.sort((p1,p2)=>{
+                    return this.sort === 1 ? p2.VALUE-p1.VALUE : p1.VALUE-p2.VALUE
+                })
+            }
+            return arr
+        }
+    }, */
+
+    watch:{
+/*         keyword:{
+            immediate:true,
+            handler(val){
+                this.searchlists = this.lists.filter((list)=>{
+                    return this.list.IDX.indexOf(val) !== -1
+                })
+            }
+        },  */ 
+    },
+
+
+
+
+
+    mounted() {
+        //連接JSON
+        fetch("https://pr4nho5dtagp.fs-technology.com/data-sample.json")
+            .then((res) => {
+                return res.json()
+            })
+            .then((lists) => {
+                return this.lists = lists
+            })
+    },
+})
+
+//JQ AJ 圖表
+var dataUrl= "https://pr4nho5dtagp.fs-technology.com/data-sample.json"
+$.ajax({
+    url: dataUrl,
+    method: 'GET',      // 指定請求方法
+    dataType: 'json',   // API的格式
+    data: '',           //若有傳送資料時的資料設定 (GET沒有)
+    async: true,　      //預設是true=非同步,false=同步 (true時整行可省略)
+    success: function(res){ // 成功的話執行
+
+    const ctx = document.getElementById('myChart');
+    
+    const CON = [];
+    const UCL = [];
+    const LCL = [];
+    const VALUE = [];
+
+    for (let i=0; i<res.length; i++) {
+        CON.push(res[i].CONTEXID)
+        UCL.push(res[i].UCL)
+        LCL.push(res[i].LCL)
+        VALUE.push(res[i].VALUE)
+    }   
+
+            console.log('成功',VALUE)
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: CON,               //下面名字
+                datasets: [
+                    {
+                    label: 'VALUE',   //上面標題
+                    data: VALUE ,               //線條
+                    borderColor: 'orange',
+                    borderWidth: 4              //線條粗度
+                    },
+                    {
+                    label: 'LCL',   
+                    borderColor: 'red',
+                    data: LCL , 
+                    borderWidth: 4            
+                    },
+                    {
+                    label: 'UCL',   //上面標題
+                    data: UCL,              //線條
+                    borderColor: 'green',
+                    borderWidth: 4           //線條粗度
+                    }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    },
+    error: err =>{
+        console.log('失敗')
+        }   
+});
+
+
+</script>
+</body>
+
+</html>
