@@ -1,0 +1,92 @@
+[
+  {
+    "IDX": 1,
+    "CONTEXID": "dghj",
+    "PIECEID": "fghfgfgj",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 56.17,
+    "LCL": 53.91,
+    "VALUE": 14.71
+  },
+  {
+    "IDX": 2,
+    "CONTEXID": "87fghj7",
+    "PIECEID": "CBfgjdfgj44",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 51.07,
+    "LCL": 53.18,
+    "VALUE": 14.55
+  },
+  {
+    "IDX": 3,
+    "CONTEXID": "8sfgth7",
+    "PIECEID": "Udghjdghfj",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 56.01,
+    "LCL": 53.15,
+    "VALUE": 15.74
+  },
+  {
+    "IDX": 4,
+    "CONTEXID": "dghjBJX",
+    "PIECEID": "dhgjdfgh6",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 56.01,
+    "LCL": 53.19,
+    "VALUE": 15.02
+  },
+  {
+    "IDX": 5,
+    "CONTEXID": "dghjX",
+    "PIECEID": "Sdfghjd5",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 51.08,
+    "LCL": 53.14,
+    "VALUE": 54.16
+  },
+  {
+    "IDX": 6,
+    "CONTEXID": "1dghj1",
+    "PIECEID": "Tdgfhj5",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 16.08,
+    "LCL": 14,
+    "VALUE": 51.84
+  },
+  {
+    "IDX": 7,
+    "CONTEXID": "dghjE1",
+    "PIECEID": "Cdgfhjg3",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 51.08,
+    "LCL": 53.11,
+    "VALUE": 14.26
+  },
+  {
+    "IDX": 8,
+    "CONTEXID": "Qdfhgj",
+    "PIECEID": "dfghj939",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 16.07,
+    "LCL": 13.9,
+    "VALUE": 51.67
+  },
+  {
+    "IDX": 9,
+    "CONTEXID": "QdghjWY",
+    "PIECEID": "dfgj685",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 51.07,
+    "LCL": 51,
+    "VALUE": 15.84
+  },
+  {
+    "IDX": 10,
+    "CONTEXID": "Gdfghj",
+    "PIECEID": "dfghj23",
+    "TIMETAG": "2023/01/29 ",
+    "UCL": 51.06,
+    "LCL": 53.12,
+    "VALUE": 15.72
+  }
+]

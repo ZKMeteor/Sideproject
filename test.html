@@ -72,10 +72,10 @@
         <h1 class='p-3'>Information</h1>    
         <div class="box-1 container-fluid px-3">
             <div class="top d-flex">
-                <div class="col-3">讀取資料</div>
-                <div class="col-3">繪表</div>
-                <div class="col-3">繪圖</div>
-                <div class="col-3">完成整體網頁讀取</div>
+                <div class="col-3">資料</div>
+                <div class="col-3">表</div>
+                <div class="col-3">圖</div>
+                <div class="col-3">完成整體</div>
             </div>
             <div class="top-2 d-flex ">
                 <div class="col-3">time</div>
@@ -264,7 +264,7 @@ const vm =new Vue({
 
     mounted() {
         //連接JSON
-        fetch("https://pr4nho5dtagp.fs-technology.com/data-sample.json")
+        fetch("./testdata.json")
             .then((res) => {
                 return res.json()
             })
@@ -275,7 +275,7 @@ const vm =new Vue({
 })
 
 //JQ AJ 圖表
-var dataUrl= "https://pr4nho5dtagp.fs-technology.com/data-sample.json"
+var dataUrl= "./testdata.json"
 $.ajax({
     url: dataUrl,
     method: 'GET',      // 指定請求方法
