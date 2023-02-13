@@ -73,12 +73,7 @@ align-items: center;                /*水平*/
     padding: 3%;
 }
 
-/* .active  > img{
-    max-width: 100%;
-    object-fit: cover;
-    object-position: 50% 50%;
-    vertical-align: bottom;         
-} */
+
 
 .title1 h5{
     color: orange;
@@ -87,9 +82,12 @@ align-items: center;                /*水平*/
     font-weight: 900;
 }
 
-
-
-
+.mainpicture img{
+    height: 100vh;
+    width: 100%;
+    object-fit:cover;
+    object-position:50% 50%;
+}
 
 .title2 {
     background-color:#FFF8D7;
