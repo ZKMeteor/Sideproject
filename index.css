@@ -169,10 +169,16 @@ h3{
     padding-top: 5px;
 }
 
+.title3-1{
 
+    border-radius: 10px;
+
+
+}
 
 .title3 .box{
     position: relative;
+
 }
 
 .title3 .box:hover .hover1{
