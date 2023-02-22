@@ -55,6 +55,7 @@ align-items: center;                /*水平*/
 }
 
 .nav-2 a{
+    font-weight: 900;
     letter-spacing:0.15em;          /* 文字間距 */
     font-size: 20PX;
 }
