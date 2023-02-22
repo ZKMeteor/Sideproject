@@ -21,6 +21,7 @@ a:hover{text-decoration:none}  /*超連結去底線*/
     animation-iteration-count: infinite;
 } */
 
+
 .nav{
 z-index: 9999;
 position: fixed;
@@ -46,25 +47,39 @@ align-items: center;
 justify-content:center;
 }
 
+
+.btn_control span{
+    opacity: 0;
+  }
+
 .nav-2{
-flex: 1;
-display: flex;
-flex-direction: row;                /*由左至右*/
-justify-content: space-evenly;      /*間隔*/
-align-items: center;                /*水平*/
+  flex: 1;
+  display: flex;
+}
+
+.nav-2-1{
+  font-weight: 900;
+  flex: 1;
+  display: flex;
+  flex-direction: row;                /*由左至右*/
+  justify-content: space-evenly;      /*間隔*/
+  align-items: center;                /*水平*/
 }
 
 .nav-2 a{
-    font-weight: 900;
     letter-spacing:0.15em;          /* 文字間距 */
     font-size: 20PX;
+
 }
 
 .nav-2 a:hover{
     border-radius: 5px;
-    transition: 0.5s;
     background:rgba(140, 247, 255, 0.884);
     color: purple;
+}
+
+.active{
+  color: purple;
 }
 
 .container-fluid{
@@ -268,4 +283,61 @@ h3{
         font-size: 15px;   
     }
 
+    .hover1{
+        position: fixed;
+    }
+    
+
+    .btn_control{
+        display: block;
+        font-size: 30px;
+        color: rgba(140, 247, 255, 0.884);
+        border-radius:10px ;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+      }
+    
+      .btn_control span{
+        opacity: 5;
+        background-color: rgba(140, 247, 255, 0.884);
+      }
+    
+      .btn_control::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 2px;
+        width: 30px;
+        background-color: purple;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 8px 0px purple,
+                    0px -8px 0px purple;
+    
+      }
+    
+    
+      .nav-2-1{
+      background-color: rgba(140, 247, 255, 0.884);
+      position:absolute;
+      top: 45px;
+      right:-100%;
+      width: 30%;
+      flex: 1;
+      display: flex;
+      flex-direction: column;                /*由左至右*/
+      align-items: center;                /*水平*/
+    }
+    
+    .nav-2-1 a{
+      font-weight: 900;
+      color: purple;
+      border-bottom: 1px solid purple;
+    }
+    
+    #btn_control:checked ~ nav{
+      right: 10px;
+    }
 }
