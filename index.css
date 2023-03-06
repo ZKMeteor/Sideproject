@@ -137,6 +137,12 @@ justify-content:center;
     background-color:#FFF8D7;
 }
 
+#title2{
+    opacity: 0;
+    transition: 3s;
+}
+
+
 h1{
     color: purple;
     letter-spacing:0.15em;
@@ -188,8 +194,9 @@ h2{
 
 .title3{
     background-color:white;
-    
 }
+
+
 
 
 h3{
