@@ -19,6 +19,34 @@ window.addEventListener('scroll', function() {
     }
   });
 
+// 初始化变量 changeskin
+var changeskin = true;
+
+// 使用 setInterval() 函数每隔 5 秒执行一次更改背景颜色的代码
+setInterval(() => {
+  var nav = document.querySelector('.nav');
+  var nav2a = document.querySelectorAll('.nav-2 a');
+  var title3 = document.querySelector('.title3');
+  var project = document.querySelector('.project');
+  // 根据 changeskin 的状态来更改背景颜色
+  if (changeskin) {
+    nav.style.backgroundColor = 'black';
+    nav2a.forEach(a=>{
+      a.style.color = 'red';
+    })
+    title3.style.backgroundColor = 'black';
+    project.style.color = 'red';
+  } else {
+    nav.style.backgroundColor = 'white';
+    nav2a.forEach(a=>{
+      a.style.color = '#0d6efd';
+    })
+    title3.style.backgroundColor = 'white';
+    project.style.color = 'purple';
+  }
+  
+  changeskin = !changeskin; // 反转状态
+}, 6000);
 
 let year = new Date().getFullYear();
 
