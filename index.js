@@ -19,6 +19,7 @@ window.addEventListener('scroll', function() {
     }
   });
 
+
 // 初始化变量 changeskin
 var changeskin = true;
 

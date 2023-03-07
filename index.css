@@ -84,7 +84,6 @@ justify-content:center;
     right: 100%;
     bottom: -5px;
     border-bottom: 1px solid purple;
-    -webkit-transition: .4s;
     transition: .4s;
 }
 
@@ -153,8 +152,7 @@ h1{
 }
 
 hr{
-    border-color: #727878;
-    opacity: 0.3;
+    color: gray;
     align-items: center;
     width: 100%;
     margin:30px 0;
@@ -202,11 +200,6 @@ h2{
     border-radius: 10px;
 }
 
-.title3 hr{
-    transition: .6s;
-    color: orange;
-    padding: 1px;
-}
 
 h3{
     color: purple;
