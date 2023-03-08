@@ -11,10 +11,12 @@ window.addEventListener('scroll', function() {
     // 當捲軸滾動到目標元素的位置時，執行特效的程式碼
     if (scrollPosition > targetPosition) {
       // 在這裡加入特效的程式碼
+/*       targetElement.classList.remove('animate__rotateOutUpLeft'); */
       targetElement.classList.add('animate__fadeInDown');
       targetElement.style.opacity='1'
     }else{
         targetElement.classList.remove('animate__fadeInDown');
+/*         targetElement.classList.add('animate__rotateOutUpLeft'); */
         targetElement.style.opacity='0'
     }
   });

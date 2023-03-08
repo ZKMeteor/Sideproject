@@ -32,6 +32,7 @@ background-color: white ;
 opacity:0.9;
 display: flex;
 transition: .6s;
+
 }
 
 .nav img{
@@ -67,10 +68,12 @@ justify-content:center;
   align-items: center;                /*水平*/
 }
 
+
+
 .nav-2 a{
     letter-spacing:0.15em;          /* 文字間距 */
     font-size: 20PX;
-    margin: 0 5px;
+    margin: 3px;
     position: relative;
     transform: translateY(0);
     transition: .6s;
@@ -301,6 +304,7 @@ h3{
         flex-direction: row;                /*由左至右*/
         justify-content: space-evenly;      /*間隔*/
         align-items: center;                /*水平*/
+
         }
 
         
@@ -351,57 +355,61 @@ h3{
         align-items: center;
         justify-content:left;
         margin-left: 5px;
-      }
-        .btn_control{
-          display: block;
-          font-size: 30px;
-          color: rgba(140, 247, 255, 0.884);
-          border-radius:10px ;
-          position: absolute;
-          top: 5px;
-          right: 10px;
-        }
-      
-        .btn_control span{
-          opacity: 5;
-          background-color: rgba(140, 247, 255, 0.884);
-        }
-      
-        .btn_control::before{
-          content: '';
-          position: absolute;
-          height: 2px;
-          left: 2px;
-          width: 30px;
-          background-color: purple;
-          top: 0;
-          bottom: 0;
-          margin: auto;
-          box-shadow: 0px 8px 0px purple,
-                      0px -8px 0px purple;
-      
-        }
-      
-      
-        .nav-2-1{
-        background-color: rgba(140, 247, 255, 0.884);
-        position:absolute;
-        top: 45px;
-        right:-100%;
-        width: 30%;
-        flex: 1;
-        display: flex;
-        flex-direction: column;                /*由左至右*/
-        align-items: center;                /*水平*/
-      }
-      
-      .nav-2-1 a{
-        font-weight: 900;
-        color: purple;
-      
-      }
-      
-      #btn_control:checked ~ nav{
+    }
+
+
+
+    .btn_control{
+        display: block;
+        font-size: 30px;
+        color: rgba(140, 247, 255, 0.884);
+        border-radius:10px ;
+        position: absolute;
+        top: 5px;
         right: 10px;
-      }
+    }
+    
+    .btn_control span{
+        opacity:0;
+        background-color: rgba(140, 247, 255, 0.884);
+
+    }
+    
+    .btn_control::before{
+        content: '';
+        position: absolute;
+        height: 2px;
+        left: 2px;
+        width: 30px;
+        background-color: purple;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        box-shadow: 0px 8px 0px purple,
+                    0px -8px 0px purple;
+    
+    }
+    
+    
+    .nav-2-1{
+    background-color: rgba(140, 247, 255, 0.884);
+    position:absolute;
+    top: 45px;
+    right:-100%;
+    width: 30%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;                /*由左至右*/
+    align-items: center;                /*水平*/
+    }
+    
+    .nav-2-1 a{
+    font-weight: 900;
+    color: purple;
+    
+    }
+    
+    #btn_control:checked ~ nav{
+    right:50px;
+    }
 }
