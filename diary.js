@@ -31,16 +31,15 @@ function render(){
     list.innerHTML = html;
 }
 
-/* 
-*
+
+/* *
 **
 ***
 ****
 let a = ''
 
 for( let i = 4 ; i >= 1 ; i--){
-        a + = '*' ;
-        console.log(a);
-    '\n';
-} */
-
+    a +='*' ;
+    console.log(a);
+}
+ */
