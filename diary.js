@@ -32,14 +32,26 @@ function render(){
 }
 
 
-/* *
-**
-***
-****
+for (let i = 4; i >= 0; i--) {
+  console.log("*".repeat(i));
+}
+
 let a = ''
 
 for( let i = 4 ; i >= 1 ; i--){
     a +='*' ;
     console.log(a);
 }
- */
+
+
+let star = "*";
+let space = " ";
+for (let i = 1; i <= 5; i++) {
+  console.log(space.repeat(5 - i) + star.repeat(2 * i - 1));
+}
+
+let star1 = "*";
+let space1 = " ";
+for (let i = 5; i <= 1; i--) {
+  console.log(space1.repeat(i) + star1.repeat(2 * i - 1));
+}
